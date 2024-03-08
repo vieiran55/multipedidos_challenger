@@ -9,7 +9,7 @@ const users = [
   { nome: "Gandalf", idade: 99, email: "gandalf@teste.com" },
   { nome: "Luke", idade: 23, email: "luke@teste.com" },
   { nome: "Leia", idade: 22, email: "leia@teste.com" },
-  { nome: "Han", idade: 35, email: "han@teste.com" },
+  { nome: "Han", idade: 39, email: "han@teste.com" },
   { nome: "Darth", idade: 45, email: "darth@teste.com" },
   { nome: "Yoda", idade: 900, email: "yoda@teste.com" },
   { nome: "Indiana", idade: 40, email: "indiana@teste.com" },
@@ -18,12 +18,17 @@ const users = [
 
 function searchUser(array, value) {
   return new Promise((resolve, reject) => {
-    const lowerCaseValue = value.toLowerCase();
+    const lowerCaseValue = value.toString().toLowerCase();
     const user = array.find(user =>
       Object.values(user)
-        .some(property =>
-          typeof property === "string" && property.toLowerCase() === lowerCaseValue
-        )
+        .some(property => {
+          if (typeof property === "string") {
+            return property.toLowerCase() === lowerCaseValue;
+          } else if (typeof property === "number") {
+            return property.toString().toLowerCase() === lowerCaseValue;
+          }
+          return false;
+        })
     );
     if (user) {
       resolve(user);
@@ -39,6 +44,6 @@ function searchUser(array, value) {
     });
 }
 
-searchUser(users, "elsa");
+searchUser(users, "Frodo");
 
 
