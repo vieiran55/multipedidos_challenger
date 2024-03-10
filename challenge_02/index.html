@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MultiPedidos</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <nav class="navbar"></nav>
+  <h2 class="tabela_titulo">Painel de Administração de Motoboys</h2>
+  <div class="container">
+    <table class="tabela">
+      <thead>
+        <tr class="tabela_cabecalho">
+          <th>#</th>
+          <th></th>
+          <th>Nome</th>
+          <th>Status</th>
+          <th class="tabela_cabecalho_action">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/harry.jpg"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Harry Potter</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-0')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="additional-info-0" id="additional-info-0">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-0" id="additional-info-0">
+          <td></td>
+          <td>ABC-1234</td>
+          <td>(11) 1234-5678</td>
+          <td>harry@example.com</td>
+        </tr>
+        <!-- Adicionando Hermione Granger -->
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/hemione.jpg"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Hermione Granger</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-1')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Adicionando as informações adicionais da Hermione Granger -->
+        <tr class="additional-info-1" id="additional-info-1">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-1" id="additional-info-1">
+          <td></td>
+          <td>DEF-5678</td>
+          <td>(11) 9876-5432</td>
+          <td>hermione@example.com</td>
+        </tr>
+        <!-- Adicionando Ron Weasley -->
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/ron.jpg"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Ron Weasley</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-2')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Adicionando as informações adicionais do Ron Weasley -->
+        <tr class="additional-info-2" id="additional-info-2">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-2" id="additional-info-2">
+          <td></td>
+          <td>GHI-9012</td>
+          <td>(11) 5555-5555</td>
+          <td>ron@example.com</td>
+        </tr>
+        <!-- Adicionando Gandalf -->
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/gandalf.jpg"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Gandalf</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-3')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Adicionando as informações adicionais do Gandalf -->
+        <tr class="additional-info-3" id="additional-info-3">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-3" id="additional-info-3">
+          <td></td>
+          <td>JKL-3456</td>
+          <td>(11) 4444-4444</td>
+          <td>gandalf@example.com</td>
+        </tr>
+        <!-- Adicionando Luke -->
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/luke.jpg"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Luke Skywalker</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-4')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Adicionando as informações adicionais do Luke -->
+        <tr class="additional-info-4" id="additional-info-4">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-4" id="additional-info-4">
+          <td></td>
+          <td>MNO-7890</td>
+          <td>(11) 6666-6666</td>
+          <td>luke@example.com</td>
+        </tr>
+        <!-- Adicionando Darth -->
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/darth.jpg"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Darth Vader</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-5')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Adicionando as informações adicionais do Darth -->
+        <tr class="additional-info-5" id="additional-info-5">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-5" id="additional-info-5">
+          <td></td>
+          <td>XYZ-1234</td>
+          <td>(11) 1111-1111</td>
+          <td>darth@example.com</td>
+        </tr>
+        <!-- Adicionando Yoda -->
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/yoda.jpg"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Yoda</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-6')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Adicionando as informações adicionais do Yoda -->
+        <tr class="additional-info-6" id="additional-info-6">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-6" id="additional-info-6">
+          <td></td>
+          <td>UVW-5678</td>
+          <td>(11) 2222-2222</td>
+          <td>yoda@example.com</td>
+        </tr>
+        <!-- Adicionando Goku -->
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/goku.png"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Goku</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-7')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Adicionando as informações adicionais do Goku -->
+        <tr class="additional-info-7" id="additional-info-7">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-7" id="additional-info-7">
+          <td></td>
+          <td>XYZ-9012</td>
+          <td>(11) 3333-3333</td>
+          <td>goku@example.com</td>
+        </tr>
+        <!-- Adicionando Vegeta -->
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/vegita.png"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Vegeta</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-8')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Adicionando as informações adicionais do Vegeta -->
+        <tr class="additional-info-8" id="additional-info-8">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-8" id="additional-info-8">
+          <td></td>
+          <td>ABC-4567</td>
+          <td>(11) 4444-4444</td>
+          <td>vegeta@example.com</td>
+        </tr>
+        <!-- Adicionando Ash Ketchum -->
+        <tr class="motoboys-list">
+          <td><input type="checkbox" /></td>
+          <td>
+            <div>
+              <img
+                src="./src/imgs/users/ash.jpg"
+                alt="photo profile"
+                class="profile_picture"
+                srcset=""
+              />
+            </div>
+          </td>
+          <td>Ash Ketchum</td>
+          <td>
+            <h5>Ativo</h5>
+          </td>
+          <td class="btn_conteiner">
+            <ul class="btn_details">
+              <li>
+                <img
+                  src="./src/imgs/eye.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                  onclick="showAdditionalInfo('additional-info-9')"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/edit.svg"
+                  alt="edit icon"
+                  class="btn_icon_edit"
+                />
+              </li>
+              <li>
+                <img
+                  src="./src/imgs/trash.svg"
+                  alt="trash icon"
+                  class="btn_icon"
+                />
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Adicionando as informações adicionais do Ash Ketchum -->
+        <tr class="additional-info-9" id="additional-info-9">
+          <td></td>
+          <td>Placa do veículo:</td>
+          <td>Telefone:</td>
+          <td>Email:</td>
+        </tr>
+        <tr class="additional-info-9" id="additional-info-9">
+          <td></td>
+          <td>DEF-2468</td>
+          <td>(11) 7777-7777</td>
+          <td>ash@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function showAdditionalInfo(id) {
+      const additionalInfo = document.querySelectorAll(`#${id}`);
+      additionalInfo.forEach((info) => {
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "table-row";
+        } else {
+          info.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

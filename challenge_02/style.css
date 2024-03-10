@@ -1,0 +1,125 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #504190;
+  height: 5rem;
+  background-image: url("./src/imgs/ipo-multipedidos-horizontal-colorido-_1_.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.container {
+  
+  max-width: 800px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabela_titulo {
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  color: #504190;
+  padding-top: 4rem;
+  text-shadow: black 0.1em 0.1em 1em;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabela_cabecalho_action {
+  text-align: center;
+}
+
+.conteiner_motoboy {
+  display: flex;
+  flex-direction: row;
+  width: 160px;
+  justify-content: space-around;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.profile_picture {
+  border: none;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+th, td {
+  font-size: 14px;
+  padding: 5px;
+  text-align: left;
+  vertical-align: middle;
+  max-width: 67px; /* Define a largura máxima para todas as células <th> e <td> */
+  white-space: normal; /* Permite que o texto seja quebrado em várias linhas */
+}
+th {
+}
+
+.btn_conteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 100px;
+}
+
+.btn_details {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding-top: 25px;
+}
+
+.btn_icon {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  color: #8575cd;
+}
+
+.btn_icon_edit {
+  width: 26px;
+  height: 20px;
+  padding: 5px;
+  color: #8575cd;
+}
+
+.additional-info-0,
+.additional-info-1,
+.additional-info-2,
+.additional-info-3,
+.additional-info-4,
+.additional-info-5,
+.additional-info-6,
+.additional-info-7,
+.additional-info-8,
+.additional-info-9 {
+  display: none;
+}
