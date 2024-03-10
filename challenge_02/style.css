@@ -1,5 +1,7 @@
 :root {
   --azul: #3772FF;
+  --azul-claro: #9aa2b2;
+  --azul-acizentado: #6c7a91;
   --branco: #FFFFFF;
   --verde: #36D6AD;
   --coral: #FC7071;
@@ -7,19 +9,22 @@
   --cinza: #737380;
   --cinza-medio: #BCBCBC;
   --cinza-claro: #F6F6F6;
+  --roxo: #504190;
+  --verde: #d2ebd3;
+  --verde-escuro: #4fb853;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-family: 'Poppins';
   font-style: normal;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #504190;
+  background-color: var(--roxo);
   height: 5rem;
   background-image: url("./src/imgs/ipo-multipedidos-horizontal-colorido-_1_.png");
   background-size: contain;
@@ -28,10 +33,9 @@ body {
 }
 
 .container {
-  
   max-width: 800px;
   width: 90%;
-  margin: 40px auto;
+  margin: 10px auto;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -41,22 +45,76 @@ body {
   align-items: center;
 }
 
-.tabela_titulo {
+.admin-panel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel-title {
   text-align: center;
   font-size: 27px;
   font-weight: bold;
-  color: #504190;
-  padding-top: 4rem;
-  text-shadow: black 0.1em 0.1em 1em;
+  color: var(--roxo);
+  padding-top: 2rem;
+}
+
+.button-group{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.button{
+  height: 60px;
+  width: 90px;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 6px;
+  color: #4e5d78;
+  font-weight: bolder;
+  background-color: #fafbfc;
+  border-color: #1b1f2326;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+}
+
+.button:hover{
+    background-color: var(--cinza-medio);
+    border-color: #1b1f2326;
+    transition-duration: 0.1s;
+}
+
+.button:active{
+  background-color: var(--roxo);
+  color: var(--branco);
 }
 
 .tabela {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  color: var(--azul-acizentado);
+}
+
+.tabela_cabecalho_titulos{
+  color: var(--azul-claro);
+  font-weight: bold;
 }
 
 .tabela_cabecalho_action {
+  color: var(--azul-claro);
+  font-weight: bold;
   text-align: center;
 }
 
@@ -84,10 +142,16 @@ th, td {
   padding: 5px;
   text-align: left;
   vertical-align: middle;
-  max-width: 67px; /* Define a largura máxima para todas as células <th> e <td> */
-  white-space: normal; /* Permite que o texto seja quebrado em várias linhas */
+  max-width: 67px;
+  white-space: normal;
 }
-th {
+
+.status_ativo{
+  background-color: var(--verde);
+  text-align: center;
+  width: 45px;
+  border-radius: 5px;
+  color: var(--verde-escuro);
 }
 
 .btn_conteiner {
@@ -105,7 +169,7 @@ th {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding-top: 25px;
+  padding-top: 16px;
 }
 
 .btn_icon {
@@ -122,22 +186,8 @@ th {
   color: #8575cd;
 }
 
-.additional-info-0,
-.additional-info-1,
-.additional-info-2,
-.additional-info-3,
-.additional-info-4,
-.additional-info-5,
-.additional-info-6,
-.additional-info-7,
-.additional-info-8,
-.additional-info-9 {
-  display: none;
-}
-
-
 .modal {
-  display: block; /* Ocultar o modal por padrão */
+  display: none; /* Ocultar o modal por padrão */
   position: fixed; /* Posição fixa */
   z-index: 1; /* Sobrepor tudo */
   left: 0;
@@ -229,4 +279,35 @@ th {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.pagination-container{
+  margin: 10px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  font-size: 15px;
+  color: var(--azul);
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.pagination a.active {
+  background-color: var(--azul);
+  color: var(--branco);
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #d4d5d2;
 }

@@ -6,24 +6,38 @@
     <title>MultiPedidos</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <nav class="navbar"></nav>
-    <h2 class="tabela_titulo">Painel de Administração de Motoboys</h2>
+    <div class="admin-panel">
+      <h2 class="panel-title">Motoboys Administration Panel</h2>
+      <div class="button-group">
+        <button class="button">Add New</button>
+        <button class="button">Import Motoboy</button>
+        <button class="button">Export Motoboy</button>
+      </div>
+    </div>
+
     <div class="container">
+
       <table class="tabela">
         <thead>
           <tr class="tabela_cabecalho">
-            <th>#</th>
             <th></th>
-            <th>Nome</th>
-            <th>Status</th>
+            <th></th>
+            <th class="tabela_cabecalho_titulos">Nome</th>
+            <th class="tabela_cabecalho_titulos">Status</th>
             <th class="tabela_cabecalho_action">Action</th>
           </tr>
         </thead>
@@ -42,7 +56,7 @@
             </td>
             <td>Harry Potter</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -85,7 +99,7 @@
             </td>
             <td>Hermione Granger</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -130,7 +144,7 @@
             </td>
             <td>Ron Weasley</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -175,7 +189,7 @@
             </td>
             <td>Gandalf</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -220,7 +234,7 @@
             </td>
             <td>Luke Skywalker</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -265,7 +279,7 @@
             </td>
             <td>Darth Vader</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -310,7 +324,7 @@
             </td>
             <td>Yoda</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -355,7 +369,7 @@
             </td>
             <td>Goku</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -400,7 +414,7 @@
             </td>
             <td>Vegeta</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -445,7 +459,7 @@
             </td>
             <td>Ash Ketchum</td>
             <td>
-              <h5>Ativo</h5>
+              <h5 class="status_ativo">Ativo</h5>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -477,27 +491,47 @@
           <!-- Adicionando as informações adicionais do Ash Ketchum -->
         </tbody>
       </table>
+      
       <div id="modal" class="modal">
         <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <h3 class="modal-title">Perfil</h3>
           <div class="profile-info">
-            <img class="profile-picture" src="./src/imgs/users/harry.jpg" alt="Profile Photo" />
-      
+            <img
+              class="profile-picture"
+              src="./src/imgs/users/harry.jpg"
+              alt="Profile Photo"
+            />
+
             <h4 class="profile-label" for="profile-name">Nome</h4>
             <div class="profile-data">Harry Potter</div>
-      
-            <h4 class="profile-label" for="profile-vehicle">Placa do Veículo</h4>
+
+            <h4 class="profile-label" for="profile-vehicle">
+              Placa do Veículo
+            </h4>
             <div class="profile-data">ABC-1234</div>
-      
+
             <h4 class="profile-label" for="profile-phone">Telefone</h4>
             <div class="profile-data">(11) 1234-5678</div>
-      
+
             <h4 class="profile-label" for="profile-email">Email</h4>
             <div class="profile-data">harry@example.com</div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="pagination-container">
+      <div class="pagination">
+        <a href="#">Prev</a>
+        <a class="active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">...</a>
+        <a href="#">25</a>
+        <a href="#">Next</a>
+      </div>
+    </div>
 
     <script>
       function showAdditionalInfo(id) {
