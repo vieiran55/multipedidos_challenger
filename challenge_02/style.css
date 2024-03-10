@@ -360,7 +360,9 @@ th, td {
 
   .modal-content {
     width: 420px;
-    margin-left: 10em;
+    position: fixed;
+    right: 30%;
+    top: 15%;
   }
 
   .panel-title {
@@ -399,5 +401,5 @@ th, td {
     display: flex;
     flex-direction: row;
     width: 130px;
-  }  
+  }
 }
