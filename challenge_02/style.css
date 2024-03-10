@@ -1,3 +1,14 @@
+:root {
+  --azul: #3772FF;
+  --branco: #FFFFFF;
+  --verde: #36D6AD;
+  --coral: #FC7071;
+  --creme: #FCF0E3;
+  --cinza: #737380;
+  --cinza-medio: #BCBCBC;
+  --cinza-claro: #F6F6F6;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -122,4 +133,100 @@ th {
 .additional-info-8,
 .additional-info-9 {
   display: none;
+}
+
+
+.modal {
+  display: block; /* Ocultar o modal por padrão */
+  position: fixed; /* Posição fixa */
+  z-index: 1; /* Sobrepor tudo */
+  left: 0;
+  top: 0;
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  overflow: auto; /* Adicionar rolagem */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semitransparente */
+}
+
+.modal-header{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.modal-content {
+  background: var(--cinza-claro);
+  border-radius: 10px;
+  margin: 2em;
+  margin-left: 2em;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 80%; /* Largura do modal */
+  color: #3772FF;
+  font-weight: bold;
+  height: 550px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title{
+  font-size: 21px;
+  color: var(--cinza);
+  margin-top: -2em;
+}
+
+.profile-picture {
+  border: none;
+  width: 110px;
+  height: 110px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.profile-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 490px;
+
+  text-align: start;
+}
+
+.profile-data{
+  background: var(--branco);
+  width: 280px;
+  height: 48px;
+  color: var(--cinza);
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  align-self: self-end;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
