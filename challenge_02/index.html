@@ -19,17 +19,24 @@
     />
   </head>
   <body>
-    <nav class="navbar"></nav>
-    <div class="admin-panel">
-      <h2 class="panel-title">Motoboys Administration Panel</h2>
-      <div class="button-group">
-        <button class="button">Add New</button>
-        <button class="button">Import Motoboy</button>
-        <button class="button">Export Motoboy</button>
+    <nav class="navbar">
+      <div class="user">
+        <img class="profile_picture" src="./src/imgs/users/guest.png" alt="photo profile">
+        <h2 class="user-name">Admin</h2>
+      </div>
+    </nav>
+    <div class="admin-panel-conteiner">
+      <div class="admin-panel">
+        <h2 class="panel-title">Motoboys Administration Panel</h2>
+        <div class="button-group">
+          <button class="button">Add New</button>
+          <button class="button">Import Motoboy</button>
+          <button class="button">Export Motoboy</button>
+        </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container content-wrapper">
 
       <table class="tabela">
         <thead>
@@ -56,7 +63,7 @@
             </td>
             <td>Harry Potter</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_ativo">Ativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -99,7 +106,7 @@
             </td>
             <td>Hermione Granger</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_ativo">Ativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -128,8 +135,6 @@
               </ul>
             </td>
           </tr>
-          <!-- Adicionando as informações adicionais da Hermione Granger -->
-          <!-- Adicionando Ron Weasley -->
           <tr class="motoboys-list">
             <td><input type="checkbox" /></td>
             <td>
@@ -144,7 +149,7 @@
             </td>
             <td>Ron Weasley</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_ativo">Ativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -173,8 +178,6 @@
               </ul>
             </td>
           </tr>
-          <!-- Adicionando as informações adicionais do Ron Weasley -->
-          <!-- Adicionando Gandalf -->
           <tr class="motoboys-list">
             <td><input type="checkbox" /></td>
             <td>
@@ -189,7 +192,7 @@
             </td>
             <td>Gandalf</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_ativo">Ativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -218,8 +221,6 @@
               </ul>
             </td>
           </tr>
-          <!-- Adicionando as informações adicionais do Gandalf -->
-          <!-- Adicionando Luke -->
           <tr class="motoboys-list">
             <td><input type="checkbox" /></td>
             <td>
@@ -234,7 +235,7 @@
             </td>
             <td>Luke Skywalker</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_ativo">Ativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -263,8 +264,6 @@
               </ul>
             </td>
           </tr>
-          <!-- Adicionando as informações adicionais do Luke -->
-          <!-- Adicionando Darth -->
           <tr class="motoboys-list">
             <td><input type="checkbox" /></td>
             <td>
@@ -279,7 +278,7 @@
             </td>
             <td>Darth Vader</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_ativo">Ativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -308,8 +307,6 @@
               </ul>
             </td>
           </tr>
-          <!-- Adicionando as informações adicionais do Darth -->
-          <!-- Adicionando Yoda -->
           <tr class="motoboys-list">
             <td><input type="checkbox" /></td>
             <td>
@@ -324,7 +321,7 @@
             </td>
             <td>Yoda</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_inativo">Inativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -353,8 +350,6 @@
               </ul>
             </td>
           </tr>
-          <!-- Adicionando as informações adicionais do Yoda -->
-          <!-- Adicionando Goku -->
           <tr class="motoboys-list">
             <td><input type="checkbox" /></td>
             <td>
@@ -369,7 +364,7 @@
             </td>
             <td>Goku</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_ativo">Ativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -398,8 +393,6 @@
               </ul>
             </td>
           </tr>
-          <!-- Adicionando as informações adicionais do Goku -->
-          <!-- Adicionando Vegeta -->
           <tr class="motoboys-list">
             <td><input type="checkbox" /></td>
             <td>
@@ -414,7 +407,7 @@
             </td>
             <td>Vegeta</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_ativo">Ativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -443,8 +436,6 @@
               </ul>
             </td>
           </tr>
-          <!-- Adicionando as informações adicionais do Vegeta -->
-          <!-- Adicionando Ash Ketchum -->
           <tr class="motoboys-list">
             <td><input type="checkbox" /></td>
             <td>
@@ -459,7 +450,7 @@
             </td>
             <td>Ash Ketchum</td>
             <td>
-              <h5 class="status_ativo">Ativo</h5>
+              <strong class="status_ativo">Ativo</strong>
             </td>
             <td class="btn_conteiner">
               <ul class="btn_details">
@@ -488,7 +479,6 @@
               </ul>
             </td>
           </tr>
-          <!-- Adicionando as informações adicionais do Ash Ketchum -->
         </tbody>
       </table>
       
@@ -511,6 +501,11 @@
             </h4>
             <div class="profile-data">ABC-1234</div>
 
+            <h4 class="profile-label" for="model-vehicle">
+              Modelo do Veículo
+            </h4>
+            <div class="profile-data">Nimbus 2000</div>
+
             <h4 class="profile-label" for="profile-phone">Telefone</h4>
             <div class="profile-data">(11) 1234-5678</div>
 
@@ -521,7 +516,7 @@
       </div>
     </div>
 
-    <div class="pagination-container">
+    <footer class="pagination-container">
       <div class="pagination">
         <a href="#">Prev</a>
         <a class="active" href="#">1</a>
@@ -531,7 +526,7 @@
         <a href="#">25</a>
         <a href="#">Next</a>
       </div>
-    </div>
+    </footer>
 
     <script>
       function showAdditionalInfo(id) {

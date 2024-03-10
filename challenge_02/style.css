@@ -5,6 +5,7 @@
   --branco: #FFFFFF;
   --verde: #36D6AD;
   --coral: #FC7071;
+  --vermelho: #730707;
   --creme: #FCF0E3;
   --cinza: #737380;
   --cinza-medio: #BCBCBC;
@@ -30,10 +31,22 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  color: var(--branco);
 }
 
 .container {
-  max-width: 800px;
+  max-width: 750px;
   width: 90%;
   margin: 10px auto;
   padding: 10px;
@@ -43,12 +56,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1100px;
+}
+
+.admin-panel-conteiner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .admin-panel{
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1100px;
 }
 
 .panel-title {
@@ -87,12 +108,6 @@ body {
   box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   transition-property: color, background-color, border-color;
-}
-
-.button:hover{
-    background-color: var(--cinza-medio);
-    border-color: #1b1f2326;
-    transition-duration: 0.1s;
 }
 
 .button:active{
@@ -140,7 +155,7 @@ img {
 th, td {
   font-size: 14px;
   padding: 5px;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   max-width: 67px;
   white-space: normal;
@@ -151,7 +166,17 @@ th, td {
   text-align: center;
   width: 45px;
   border-radius: 5px;
+  padding: 5px;
   color: var(--verde-escuro);
+}
+
+.status_inativo{
+  background-color: var(--coral);
+  text-align: center;
+  width: 60px;
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--vermelho);
 }
 
 .btn_conteiner {
@@ -213,7 +238,7 @@ th, td {
   margin-left: 2em;
   padding: 10px;
   border: 1px solid #888;
-  width: 80%; /* Largura do modal */
+  width: 80%;
   color: #3772FF;
   font-weight: bold;
   height: 550px;
@@ -283,7 +308,6 @@ th, td {
 
 .pagination-container{
   margin: 10px auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -310,4 +334,70 @@ th, td {
 
 .pagination a:hover:not(.active) {
   background-color: #d4d5d2;
+}
+
+@media screen and (min-width: 768px) {
+  .admin-panel{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .button-group{
+    width: 45%;
+  }
+
+  th, td {
+    max-width: none;
+  }
+
+  .btn_conteiner {
+    width: 100%;
+  }
+
+  .btn_details{
+    width: 60%;
+  }
+
+  .modal-content {
+    width: 420px;
+    margin-left: 10em;
+  }
+
+  .panel-title {
+    padding-top: 1rem;
+  }
+
+  .pagination-container{
+    margin-top: 5em;
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .admin-panel {
+    width: 1100px;
+  }
+
+  .button:hover{
+    background-color: var(--cinza-medio);
+    border-color: #1b1f2326;
+    transition-duration: 0.1s;
+  }
+
+  .button:active{
+    background-color: var(--roxo);
+    color: var(--branco);
+  }
+  
+
+  .button-group{
+    width: 30%;
+  }
+
+  .user{
+    display: flex;
+    flex-direction: row;
+    width: 130px;
+  }  
 }
