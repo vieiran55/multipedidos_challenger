@@ -1,4 +1,0 @@
-1 - Visualizar a lista de motoboys cadastrados.
-2 - Selecionar um motoboy para visualizar suas informações pessoais (nome, placa do veículo, telefone e email).
-3 - Deve conter um botão de editar e excluir para cada motoboy.
-4 - Você será avaliados apenas aspectos de UI/UX, portanto, não é necessário adicionar as funcionalidades de edição e exclusão.
