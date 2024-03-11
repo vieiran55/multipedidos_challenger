@@ -21,6 +21,7 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 
 .navbar {
@@ -38,7 +39,7 @@ body {
 .user{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0 10px;
   cursor: pointer;
@@ -74,7 +75,7 @@ body {
 
 .panel-title {
   text-align: center;
-  font-size: 27px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--roxo);
   padding-top: 2rem;
@@ -83,7 +84,7 @@ body {
 .button-group{
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 100vw;
   justify-content: space-around;
   padding: 20px;
 }
@@ -146,8 +147,8 @@ img {
 
 .profile_picture {
   border: none;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -269,8 +270,16 @@ th, td {
   justify-content: space-around;
   align-items: center;
   height: 490px;
-
+  align-items: start;
   text-align: start;
+}
+
+.profile-info-picture{
+  align-self: center;
+}
+
+.profile-label{
+  padding-left: 10px;
 }
 
 .profile-data{
@@ -280,12 +289,13 @@ th, td {
   color: var(--cinza);
   font-size: 14px;
   font-weight: normal;
+  padding-left: 10px;
   border-radius: 6px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
@@ -401,5 +411,6 @@ th, td {
     display: flex;
     flex-direction: row;
     width: 130px;
+    padding: 0 30px;
   }
 }
