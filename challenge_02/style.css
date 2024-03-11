@@ -164,16 +164,16 @@ td {
   background-color: var(--verde);
   text-align: center;
   width: 45px;
-  border-radius: 5px;
-  padding: 5px;
-  color: var(--verde-escuro);
+  border-radius: 10px;
+  padding: 5px 12px;
+  color: var(--cinza);
 }
 
 .status_inativo {
   background-color: var(--coral);
   text-align: center;
   width: 60px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 5px;
   color: var(--vermelho);
 }
