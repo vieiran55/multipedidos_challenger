@@ -11,7 +11,6 @@
   --cinza-medio: #BCBCBC;
   --cinza-claro: #F6F6F6;
   --roxo: #504190;
-  --verde: #d2ebd3;
   --verde-escuro: #4fb853;
 }
 
@@ -36,7 +35,7 @@ body {
   flex-direction: row-reverse;
 }
 
-.user{
+.user {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -47,7 +46,7 @@ body {
 }
 
 .container {
-  max-width: 750px;
+  max-width: 1100px;
   width: 90%;
   margin: 10px auto;
   padding: 10px;
@@ -57,41 +56,39 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1100px;
 }
 
-.admin-panel-conteiner{
+.admin-panel-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.admin-panel{
+.admin-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1100px;
 }
 
 .panel-title {
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: var(--roxo);
   padding-top: 2rem;
 }
 
-.button-group{
+.button-group {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
   justify-content: space-around;
   padding: 20px;
 }
 
-.button{
-  height: 60px;
-  width: 90px;
+.button {
+  height: 50px;
+  width: 80px;
   display: inline-block;
   outline: 0;
   cursor: pointer;
@@ -111,7 +108,7 @@ body {
   transition-property: color, background-color, border-color;
 }
 
-.button:active{
+.button:active {
   background-color: var(--roxo);
   color: var(--branco);
 }
@@ -123,7 +120,7 @@ body {
   color: var(--azul-acizentado);
 }
 
-.tabela_cabecalho_titulos{
+.tabela_cabecalho_titulos {
   color: var(--azul-claro);
   font-weight: bold;
 }
@@ -153,7 +150,8 @@ img {
   object-fit: cover;
 }
 
-th, td {
+th,
+td {
   font-size: 14px;
   padding: 5px;
   text-align: center;
@@ -162,7 +160,7 @@ th, td {
   white-space: normal;
 }
 
-.status_ativo{
+.status_ativo {
   background-color: var(--verde);
   text-align: center;
   width: 45px;
@@ -171,7 +169,7 @@ th, td {
   color: var(--verde-escuro);
 }
 
-.status_inativo{
+.status_inativo {
   background-color: var(--coral);
   text-align: center;
   width: 60px;
@@ -213,18 +211,18 @@ th, td {
 }
 
 .modal {
-  display: none; /* Ocultar o modal por padrão */
-  position: fixed; /* Posição fixa */
-  z-index: 1; /* Sobrepor tudo */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Largura total */
-  height: 100%; /* Altura total */
-  overflow: auto; /* Adicionar rolagem */
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semitransparente */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #00000080;
 }
 
-.modal-header{
+.modal-header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -243,14 +241,13 @@ th, td {
   color: #3772FF;
   font-weight: bold;
   height: 550px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.modal-title{
+.modal-title {
   font-size: 21px;
   color: var(--cinza);
   margin-top: -2em;
@@ -264,7 +261,7 @@ th, td {
   object-fit: cover;
 }
 
-.profile-info{
+.profile-info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -274,15 +271,15 @@ th, td {
   text-align: start;
 }
 
-.profile-info-picture{
+.profile-info-picture {
   align-self: center;
 }
 
-.profile-label{
+.profile-label {
   padding-left: 10px;
 }
 
-.profile-data{
+.profile-data {
   background: var(--branco);
   width: 280px;
   height: 48px;
@@ -292,14 +289,11 @@ th, td {
   padding-left: 10px;
   border-radius: 6px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
 }
-
-
 
 .close {
   color: #aaa;
@@ -316,7 +310,7 @@ th, td {
   cursor: pointer;
 }
 
-.pagination-container{
+.pagination-container {
   margin: 10px auto;
   display: flex;
   flex-direction: column;
@@ -347,16 +341,17 @@ th, td {
 }
 
 @media screen and (min-width: 768px) {
-  .admin-panel{
+  .admin-panel {
     flex-direction: row;
     justify-content: space-around;
   }
 
-  .button-group{
+  .button-group {
     width: 45%;
   }
 
-  th, td {
+  th,
+  td {
     max-width: none;
   }
 
@@ -364,14 +359,14 @@ th, td {
     width: 100%;
   }
 
-  .btn_details{
+  .btn_details {
     width: 60%;
   }
 
   .modal-content {
     width: 420px;
     position: fixed;
-    right: 30%;
+    right: 15%;
     top: 15%;
   }
 
@@ -379,35 +374,32 @@ th, td {
     padding-top: 1rem;
   }
 
-  .pagination-container{
+  .pagination-container {
     margin-top: 5em;
   }
 }
-
-
 
 @media screen and (min-width: 1024px) {
   .admin-panel {
     width: 1100px;
   }
 
-  .button:hover{
+  .button:hover {
     background-color: var(--cinza-medio);
     border-color: #1b1f2326;
     transition-duration: 0.1s;
   }
 
-  .button:active{
+  .button:active {
     background-color: var(--roxo);
     color: var(--branco);
   }
-  
 
-  .button-group{
+  .button-group {
     width: 30%;
   }
 
-  .user{
+  .user {
     display: flex;
     flex-direction: row;
     width: 130px;

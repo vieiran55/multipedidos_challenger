@@ -6,7 +6,6 @@
     <title>MultiPedidos</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,11 +20,15 @@
   <body>
     <nav class="navbar">
       <div class="user">
-        <img class="profile_picture" src="./src/imgs/users/guest.png" alt="photo profile">
+        <img
+          class="profile_picture"
+          src="./src/imgs/users/guest.png"
+          alt="photo profile"
+        />
         <h2 class="user-name">Admin</h2>
       </div>
     </nav>
-    <div class="admin-panel-conteiner">
+    <div class="admin-panel-container">
       <div class="admin-panel">
         <h2 class="panel-title">Motoboys Administration Panel</h2>
         <div class="button-group">
@@ -36,14 +39,13 @@
       </div>
     </div>
 
-    <div class="container content-wrapper">
-
+    <div class="container">
       <table class="tabela">
         <thead>
           <tr class="tabela_cabecalho">
             <th></th>
             <th></th>
-            <th class="tabela_cabecalho_titulos">Nome</th>
+            <th class="tabela_cabecalho_titulos">Name</th>
             <th class="tabela_cabecalho_titulos">Status</th>
             <th class="tabela_cabecalho_action">Action</th>
           </tr>
@@ -481,11 +483,11 @@
           </tr>
         </tbody>
       </table>
-      
+
       <div id="modal" class="modal">
         <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
-          <h3 class="modal-title">Perfil</h3>
+          <h3 class="modal-title">Profile</h3>
           <div class="profile-info">
             <div class="profile-info-picture">
               <img
@@ -495,20 +497,16 @@
               />
             </div>
 
-            <h4 class="profile-label" for="profile-name">Nome</h4>
+            <h4 class="profile-label" for="profile-name">Name</h4>
             <div class="profile-data">Harry Potter</div>
 
-            <h4 class="profile-label" for="profile-vehicle">
-              Placa do Veículo
-            </h4>
+            <h4 class="profile-label" for="profile-vehicle">Vehicle Plate</h4>
             <div class="profile-data">ABC-1234</div>
 
-            <h4 class="profile-label" for="model-vehicle">
-              Modelo do Veículo
-            </h4>
+            <h4 class="profile-label" for="model-vehicle">Vehicle Model</h4>
             <div class="profile-data">Nimbus 2000</div>
 
-            <h4 class="profile-label" for="profile-phone">Telefone</h4>
+            <h4 class="profile-label" for="profile-phone">Phone</h4>
             <div class="profile-data">(11) 1234-5678</div>
 
             <h4 class="profile-label" for="profile-email">Email</h4>
